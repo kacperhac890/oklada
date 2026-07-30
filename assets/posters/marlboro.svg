@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1414" font-family="Georgia,'Times New Roman',serif">
+  <rect width="1000" height="1414" fill="#17788a"/>
+  <!-- lower hand holding pack -->
+  <g stroke="#111" stroke-width="7" stroke-linejoin="round">
+    <!-- palm -->
+    <path d="M470 1240 q-40 60 30 120 q90 70 220 40 q120 -28 150 -120 q20 -70 -40 -110 z" fill="#e8b487"/>
+    <!-- fingers wrapping -->
+    <path d="M560 1000 q-30 0 -34 40 l-6 150 q-2 40 34 42 q40 2 44 -40 l6 -152 q2 -40 -44 -40z" fill="#e8b487"/>
+    <path d="M640 985 q-30 0 -34 40 l-8 170 q-2 40 34 42 q40 2 44 -40 l8 -172 q2 -40 -44 -40z" fill="#eabb90"/>
+    <path d="M720 985 q-30 0 -34 40 l-8 175 q-2 40 34 42 q40 2 44 -40 l8 -177 q2 -40 -44 -40z" fill="#e8b487"/>
+    <path d="M800 1000 q-30 0 -34 40 l-6 150 q-2 40 34 42 q40 2 44 -40 l6 -152 q2 -40 -44 -40z" fill="#eabb90"/>
+    <g fill="#c0392b" stroke="#111" stroke-width="4"><ellipse cx="594" cy="1006" rx="20" ry="26"/><ellipse cx="674" cy="991" rx="20" ry="26"/><ellipse cx="754" cy="991" rx="20" ry="26"/><ellipse cx="834" cy="1006" rx="20" ry="26"/></g>
+  </g>
+  <!-- pack -->
+  <g stroke="#111" stroke-width="7" stroke-linejoin="round">
+    <rect x="540" y="700" width="300" height="470" rx="10" fill="#f4f1ea"/>
+    <!-- open lid + cigarettes -->
+    <path d="M540 700 L840 700 L820 640 L560 640 z" fill="#c0392b"/>
+    <g fill="#f0d67a" stroke="#111" stroke-width="4">
+      <rect x="576" y="596" width="34" height="70" rx="6"/><rect x="618" y="586" width="34" height="80" rx="6"/>
+      <rect x="660" y="590" width="34" height="76" rx="6"/><rect x="702" y="584" width="34" height="82" rx="6"/><rect x="744" y="596" width="34" height="70" rx="6"/>
+    </g>
+    <g fill="#f4f1ea" stroke="#111" stroke-width="3"><rect x="580" y="574" width="26" height="30" rx="5"/><rect x="706" y="562" width="26" height="30" rx="5"/></g>
+    <!-- red chevron band -->
+    <path d="M540 900 L690 1010 L840 900 L840 940 L690 1050 L540 940 z" fill="#c0392b"/>
+    <!-- crest -->
+    <circle cx="690" cy="850" r="30" fill="#e0b13a" stroke="#111" stroke-width="4"/><path d="M690 832 l8 16 l-16 0z" fill="#c0392b" stroke="none"/>
+  </g>
+  <text x="690" y="1088" font-size="46" fill="#111" text-anchor="middle" font-weight="700" font-family="Georgia,serif">Classic</text>
+  <text x="690" y="1128" font-size="24" fill="#c0392b" text-anchor="middle" font-weight="700" letter-spacing="2">100's</text>
+  <!-- upper hand reaching in -->
+  <g stroke="#111" stroke-width="7" stroke-linejoin="round">
+    <path d="M300 470 q120 -40 210 40 q60 56 30 150 q-20 60 -90 60 q-70 0 -110 -70 q-40 -70 -120 -80 q-40 -6 -40 -60 q0 -30 120 -40z" fill="#e8b487"/>
+    <path d="M470 560 q40 -20 70 20 q30 40 6 96" fill="none"/>
+    <g fill="#eabb90"><path d="M360 500 q40 -10 70 30 l40 60 q20 34 -14 52 q-34 18 -56 -16 l-40 -66 q-24 -40 0 -60z"/></g>
+    <g fill="#c0392b" stroke="#111" stroke-width="4"><ellipse cx="356" cy="506" rx="18" ry="24" transform="rotate(-30 356 506)"/><ellipse cx="470" cy="566" rx="16" ry="22"/></g>
+  </g>
+</svg>

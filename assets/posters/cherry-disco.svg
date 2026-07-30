@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1414">
+  <defs>
+    <linearGradient id="water" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1f7f88"/><stop offset=".5" stop-color="#146069"/><stop offset="1" stop-color="#0c454d"/></linearGradient>
+    <radialGradient id="caustic" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#4bc0c0" stop-opacity=".5"/><stop offset="1" stop-color="#4bc0c0" stop-opacity="0"/></radialGradient>
+    <radialGradient id="cherry" cx="38%" cy="32%" r="70%"><stop offset="0" stop-color="#e85d5d"/><stop offset=".5" stop-color="#c01f2b"/><stop offset="1" stop-color="#7a0f18"/></radialGradient>
+    <pattern id="facets" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(8)">
+      <rect width="24" height="24" fill="#aeb9d6"/>
+      <rect width="11" height="11" fill="#dfe6f5"/><rect x="12" y="12" width="11" height="11" fill="#dfe6f5"/>
+      <rect x="12" width="11" height="11" fill="#8b96b8"/><rect y="12" width="11" height="11" fill="#8b96b8"/>
+    </pattern>
+    <radialGradient id="ballshade" cx="38%" cy="30%" r="75%"><stop offset="0" stop-color="#ffffff" stop-opacity=".7"/><stop offset=".45" stop-color="#ffffff" stop-opacity="0"/><stop offset="1" stop-color="#243056" stop-opacity=".55"/></radialGradient>
+  </defs>
+  <rect width="1000" height="1414" fill="url(#water)"/>
+  <g opacity=".8">
+    <ellipse cx="250" cy="300" rx="260" ry="120" fill="url(#caustic)"/>
+    <ellipse cx="780" cy="700" rx="300" ry="140" fill="url(#caustic)"/>
+    <ellipse cx="400" cy="1100" rx="280" ry="120" fill="url(#caustic)"/>
+  </g>
+
+  <!-- shadows -->
+  <g fill="#08343a" opacity=".5">
+    <ellipse cx="330" cy="360" rx="120" ry="34"/><ellipse cx="720" cy="300" rx="120" ry="34"/>
+    <ellipse cx="250" cy="720" rx="120" ry="34"/><ellipse cx="720" cy="820" rx="120" ry="34"/>
+    <ellipse cx="470" cy="1080" rx="120" ry="34"/><ellipse cx="800" cy="1160" rx="120" ry="34"/>
+    <ellipse cx="180" cy="1080" rx="110" ry="30"/>
+  </g>
+
+  <!-- disco balls -->
+  <g>
+    <g transform="translate(720,270)"><circle r="95" fill="url(#facets)"/><circle r="95" fill="url(#ballshade)"/><circle r="95" fill="none" stroke="#2b3866" stroke-width="2" opacity=".4"/></g>
+    <g transform="translate(250,700)"><circle r="105" fill="url(#facets)"/><circle r="105" fill="url(#ballshade)"/></g>
+    <g transform="translate(470,1060)"><circle r="80" fill="url(#facets)"/><circle r="80" fill="url(#ballshade)"/></g>
+    <g transform="translate(800,1140)"><circle r="70" fill="url(#facets)"/><circle r="70" fill="url(#ballshade)"/></g>
+    <g transform="translate(150,1050)"><circle r="46" fill="url(#facets)"/><circle r="46" fill="url(#ballshade)"/></g>
+  </g>
+
+  <!-- cherries -->
+  <g stroke="#5a0a12" stroke-width="4">
+    <g transform="translate(330,340)"><circle r="88" fill="url(#cherry)"/><path d="M40 -80 q40 -70 -20 -140" fill="none" stroke="#8a3b1f" stroke-width="10" stroke-linecap="round"/><ellipse cx="-28" cy="-34" rx="22" ry="14" fill="#ff9a9a" stroke="none" opacity=".8"/></g>
+    <g transform="translate(720,790)"><circle r="98" fill="url(#cherry)"/><path d="M44 -92 q46 -80 -24 -150" fill="none" stroke="#8a3b1f" stroke-width="10" stroke-linecap="round"/><ellipse cx="-30" cy="-38" rx="24" ry="15" fill="#ff9a9a" stroke="none" opacity=".8"/></g>
+    <g transform="translate(560,560)"><circle r="70" fill="url(#cherry)"/><path d="M32 -66 q34 -60 -16 -110" fill="none" stroke="#8a3b1f" stroke-width="9" stroke-linecap="round"/><ellipse cx="-22" cy="-26" rx="18" ry="11" fill="#ff9a9a" stroke="none" opacity=".8"/></g>
+    <g transform="translate(180,1010)"><circle r="76" fill="url(#cherry)"/><path d="M36 -72 q38 -64 -18 -120" fill="none" stroke="#8a3b1f" stroke-width="9" stroke-linecap="round"/><ellipse cx="-24" cy="-30" rx="20" ry="12" fill="#ff9a9a" stroke="none" opacity=".8"/></g>
+    <g transform="translate(830,470)"><circle r="60" fill="url(#cherry)"/><path d="M28 -56 q30 -52 -14 -96" fill="none" stroke="#8a3b1f" stroke-width="8" stroke-linecap="round"/><ellipse cx="-18" cy="-22" rx="15" ry="9" fill="#ff9a9a" stroke="none" opacity=".8"/></g>
+    <g transform="translate(470,1240)"><circle r="66" fill="url(#cherry)"/><path d="M30 -60 q32 -56 -16 -104" fill="none" stroke="#8a3b1f" stroke-width="9" stroke-linecap="round"/><ellipse cx="-20" cy="-24" rx="16" ry="10" fill="#ff9a9a" stroke="none" opacity=".8"/></g>
+  </g>
+</svg>

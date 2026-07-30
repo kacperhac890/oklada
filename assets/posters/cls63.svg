@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1414" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="clsbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1c1d1f"/><stop offset="1" stop-color="#050506"/></linearGradient>
+    <linearGradient id="clscar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a3b3e"/><stop offset="1" stop-color="#0b0b0c"/></linearGradient>
+    <radialGradient id="spot" cx="50%" cy="30%" r="60%"><stop offset="0" stop-color="#ffffff" stop-opacity=".14"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1000" height="1414" fill="url(#clsbg)"/>
+  <rect width="1000" height="1414" fill="url(#spot)"/>
+  <!-- AMG mark -->
+  <g transform="translate(120,120)"><rect x="0" y="0" width="6" height="22" fill="#fff"/><text x="20" y="19" font-size="30" font-weight="900" fill="#fff" letter-spacing="1">AMG</text></g>
+  <!-- vertical huge CLS 63 -->
+  <text x="150" y="720" font-size="330" font-weight="900" fill="#f2f2f2" letter-spacing="-10" transform="rotate(-90 150 720)" font-family="'Arial Black', Arial, sans-serif">CLS 63</text>
+  <!-- side detail frames right -->
+  <g opacity=".9">
+    <rect x="640" y="150" width="250" height="150" rx="6" fill="#242528"/>
+    <path d="M660 280 Q660 200 780 200 Q890 200 890 280 Z" fill="#3a3b3e"/>
+    <rect x="640" y="320" width="250" height="150" rx="6" fill="#20120f"/><rect x="660" y="345" width="150" height="100" rx="4" fill="#7a1f18"/>
+    <rect x="640" y="490" width="250" height="120" rx="6" fill="#242528"/><rect x="820" y="520" width="50" height="24" rx="10" fill="#8a1c14"/>
+  </g>
+  <!-- coupe silhouette -->
+  <g transform="translate(0,60)">
+    <path d="M150 1000 Q210 890 420 878 L560 872 Q680 872 760 910 L860 950 Q880 958 880 985 L882 1030 L836 1030 A50 50 0 0 0 736 1030 L360 1030 A50 50 0 0 0 260 1030 L182 1028 Q150 1026 150 1000 Z" fill="url(#clscar)"/>
+    <path d="M250 895 Q330 838 470 832 Q600 828 690 892 Z" fill="#1a1b1d"/>
+    <path d="M275 890 Q345 848 455 844 L560 890 Z" fill="#4a4d55" opacity=".5"/>
+    <circle cx="292" cy="1030" r="50" fill="#0a0a0b" stroke="#333" stroke-width="3"/><circle cx="292" cy="1030" r="22" fill="#8b1a13"/>
+    <circle cx="788" cy="1030" r="50" fill="#0a0a0b" stroke="#333" stroke-width="3"/><circle cx="788" cy="1030" r="22" fill="#8b1a13"/>
+    <ellipse cx="500" cy="1092" rx="360" ry="20" fill="#000" opacity=".55"/>
+  </g>
+  <!-- star -->
+  <g transform="translate(500,1200)"><circle r="30" fill="none" stroke="#cfcfcf" stroke-width="4"/><path d="M0 0 L0 -30 M0 0 L-26 15 M0 0 L26 15" stroke="#cfcfcf" stroke-width="4"/></g>
+  <text x="500" y="1290" font-size="30" font-weight="700" text-anchor="middle" fill="#f2f2f2" letter-spacing="8">MERCEDES-BENZ</text>
+  <text x="500" y="1335" font-size="42" font-weight="900" text-anchor="middle" fill="#ffffff" letter-spacing="4" font-family="'Arial Black',Arial,sans-serif">CLS 63</text>
+  <text x="500" y="1372" font-size="18" text-anchor="middle" fill="#8a8a8a" letter-spacing="4">5.5L V8 BiTURBO · AMG</text>
+</svg>

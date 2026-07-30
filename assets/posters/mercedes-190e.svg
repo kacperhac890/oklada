@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1414" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="mbg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfbfc"/><stop offset="1" stop-color="#dfe1e4"/></linearGradient>
+    <linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8f9298"/><stop offset=".5" stop-color="#e9ebee"/><stop offset="1" stop-color="#70737a"/></linearGradient>
+    <linearGradient id="mcar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3c3f45"/><stop offset="1" stop-color="#16181c"/></linearGradient>
+  </defs>
+  <rect width="1000" height="1414" fill="url(#mbg)"/>
+  <!-- star -->
+  <g transform="translate(500,180)"><circle r="52" fill="none" stroke="#2c2f34" stroke-width="6"/><path d="M0 0 L0 -52 M0 0 L-45 26 M0 0 L45 26" stroke="#2c2f34" stroke-width="6"/></g>
+  <text x="500" y="300" font-size="52" font-weight="400" text-anchor="middle" fill="#1f2226" letter-spacing="1">Mercedes-Benz</text>
+  <!-- collage frames -->
+  <g>
+    <rect x="120" y="360" width="360" height="230" rx="6" fill="#202226"/>
+    <!-- rear wing detail -->
+    <rect x="150" y="400" width="150" height="18" rx="6" fill="#111"/><rect x="165" y="418" width="12" height="50" fill="#111"/><rect x="273" y="418" width="12" height="50" fill="#111"/>
+    <rect x="150" y="500" width="300" height="60" rx="6" fill="#3a3d42"/><rect x="160" y="515" width="60" height="16" rx="4" fill="#cf3030"/><rect x="230" y="515" width="60" height="16" rx="4" fill="#e8a33d"/>
+    <rect x="520" y="360" width="360" height="230" rx="6" fill="#2a2d32"/>
+    <path d="M540 560 Q540 430 700 430 Q860 430 860 560 Z" fill="#3a3d42"/><rect x="560" y="470" width="90" height="26" rx="4" fill="#e8a33d"/>
+  </g>
+  <!-- side silhouette 80s sedan -->
+  <g transform="translate(0,20)">
+    <path d="M170 900 L250 900 L300 820 L560 810 L640 880 L840 890 L850 960 L820 970 Q800 970 795 950 A45 45 0 0 0 705 950 Q700 970 680 970 L360 970 Q340 970 335 950 A45 45 0 0 0 245 950 Q240 970 220 970 L180 965 Q165 965 165 945 Z" fill="url(#mcar)"/>
+    <path d="M312 828 L556 820 L610 872 L312 875 Z" fill="#9fb0c4" opacity=".55"/>
+    <circle cx="250" cy="952" r="40" fill="#111"/><circle cx="250" cy="952" r="20" fill="#c9ccd2"/>
+    <circle cx="750" cy="952" r="40" fill="#111"/><circle cx="750" cy="952" r="20" fill="#c9ccd2"/>
+    <rect x="620" y="800" width="150" height="12" rx="5" fill="#111"/>
+  </g>
+  <!-- big chrome 190 E -->
+  <text x="500" y="1210" font-size="230" font-weight="900" text-anchor="middle" fill="url(#chrome)" stroke="#5a5d63" stroke-width="2" letter-spacing="-6" font-family="'Arial Black', Arial, sans-serif">190 E</text>
+  <line x1="120" y1="1300" x2="880" y2="1300" stroke="#c6c8cc" stroke-width="2"/>
+  <g font-size="20" fill="#8a8d92"><text x="120" y="1348">2.5-16 EVOLUTION II</text><text x="880" y="1348" text-anchor="end">DTM HOMOLOGATION</text></g>
+  <text x="500" y="1348" font-size="20" fill="#8a8d92" text-anchor="middle">YOUNGTIMER</text>
+</svg>

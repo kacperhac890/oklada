@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1414" font-family="'Arial Rounded MT Bold','Trebuchet MS',sans-serif">
+  <rect width="1000" height="1414" fill="#f4efe2"/>
+  <defs>
+    <clipPath id="poster"><rect width="1000" height="1414"/></clipPath>
+  </defs>
+  <g clip-path="url(#poster)">
+    <!-- groovy wavy stripes -->
+    <g fill="#e0a13a">
+      <path d="M980 250 Q760 360 900 560 Q1040 760 820 920 Q640 1050 780 1240 Q860 1360 1000 1360 L1200 1360 L1200 100 L980 100 Z" opacity="1"/>
+      <path d="M620 1414 Q680 1240 560 1140 Q440 1040 540 900 L440 900 Q360 1030 470 1150 Q560 1250 500 1414 Z"/>
+      <path d="M760 1414 Q820 1230 720 1120 L640 1160 Q720 1260 660 1414 Z" opacity=".9"/>
+    </g>
+    <!-- text -->
+    <g fill="#e0a13a" font-weight="700" font-size="128" letter-spacing="-2">
+      <text x="90" y="360">MAYBE</text>
+      <text x="90" y="560">IT IS</text>
+      <text x="90" y="760">EASIER</text>
+      <text x="90" y="960">THAN</text>
+    </g>
+    <text x="560" y="1300" fill="#e0a13a" font-weight="700" font-size="120" letter-spacing="-2">YOU</text>
+    <text x="560" y="1410" fill="#e0a13a" font-weight="700" font-size="120" letter-spacing="-2">THINK</text>
+  </g>
+</svg>

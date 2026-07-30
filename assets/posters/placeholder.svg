@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1414" font-family="Arial, sans-serif">
+  <rect width="1000" height="1414" fill="#efede6"/>
+  <rect x="40" y="40" width="920" height="1334" fill="none" stroke="#d3cfc4" stroke-width="4" stroke-dasharray="14 12"/>
+  <g transform="translate(500,640)" fill="none" stroke="#b8b3a6" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="-120" y="-150" width="240" height="300" rx="8"/>
+    <circle cx="-45" cy="-60" r="34"/>
+    <path d="M-110 120 L-20 20 L40 80 L120 -20"/>
+  </g>
+  <text x="500" y="880" font-size="40" fill="#a29d90" text-anchor="middle" font-weight="700">Podgląd plakatu</text>
+  <text x="500" y="936" font-size="26" fill="#b8b3a6" text-anchor="middle">Wgraj obrazek w panelu admina</text>
+</svg>

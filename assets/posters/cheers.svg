@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1414" font-family="Georgia, 'Times New Roman', serif">
+  <rect width="1000" height="1414" fill="#f3eee4"/>
+  <text x="880" y="430" font-size="150" font-weight="700" text-anchor="end" fill="#e8562a" font-family="'Trebuchet MS','Segoe UI',sans-serif" font-style="italic">Cheers.</text>
+  <g fill="none" stroke="#e8562a" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <!-- arm 1: taco -->
+    <path d="M150 1414 L150 980"/>
+    <path d="M150 980 q-6 -46 40 -60 q40 -12 58 18"/>
+    <path d="M198 930 q40 -70 120 -70 q80 0 120 60 q-60 40 -120 40 q-70 0 -120 -30 z" stroke-width="8"/>
+    <circle cx="260" cy="905" r="4" fill="#e8562a" stroke="none"/><circle cx="300" cy="915" r="4" fill="#e8562a" stroke="none"/><circle cx="340" cy="900" r="4" fill="#e8562a" stroke="none"/>
+    <!-- cuff check -->
+    <path d="M118 1414 L118 1120 L182 1120 L182 1414" fill="none"/>
+    <path d="M118 1180 H182 M118 1240 H182 M118 1300 H182 M118 1360 H182 M150 1120 V1414"/>
+    <!-- arm 2: wine glass -->
+    <path d="M430 1414 L430 1060"/>
+    <path d="M430 1060 q0 -40 40 -46"/>
+    <path d="M470 1014 q-40 -30 -20 -90 q10 -30 44 -30 q34 0 44 30 q20 60 -20 90 z"/>
+    <path d="M498 1014 v70"/>
+    <path d="M470 1090 h56"/>
+    <path d="M400 1414 L400 1150 L462 1140 L462 1414" fill="#e8562a" fill-opacity=".12"/>
+    <path d="M400 1160 L462 1150" />
+    <!-- arm 3: cocktail -->
+    <path d="M640 1414 L640 1080"/>
+    <path d="M640 1080 q0 -34 36 -40"/>
+    <path d="M624 980 L724 980 L680 1046 z"/>
+    <path d="M680 1046 v34 M700 962 l14 -40"/>
+    <circle cx="714" cy="922" r="10"/>
+    <path d="M610 1414 L610 1170 L672 1170 L672 1414" />
+    <path d="M610 1230 H672 M610 1300 H672 M610 1370 H672 M641 1170 V1414"/>
+    <!-- arm 4: wine glass -->
+    <path d="M850 1414 L850 1110"/>
+    <path d="M850 1110 q0 -36 38 -42"/>
+    <path d="M888 1066 q-38 -28 -20 -84 q10 -28 42 -28 q32 0 42 28 q18 56 -20 84 z"/>
+    <path d="M914 1066 v66 M888 1138 h54"/>
+    <path d="M820 1414 L820 1200 Q878 1180 878 1200 L878 1414"/>
+    <path d="M822 1250 Q850 1234 878 1250 M822 1320 Q850 1304 878 1320 M822 1390 Q850 1374 878 1390"/>
+  </g>
+</svg>

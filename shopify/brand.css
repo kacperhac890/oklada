@@ -1,0 +1,44 @@
+/* ============================================================================
+   brand.css  —  Opcjonalne wykończenie marki OKŁADKA dla motywu Shopify „Dawn".
+   Kolory i fonty ustaw w edytorze motywu (patrz SHOPIFY.md, Krok 5).
+   Ten plik to tylko drobne detale, których nie ma w ustawieniach.
+
+   Gdzie wkleić:
+   Sklep online → Motywy → (Dawn) → ⋯ → Edytuj kod → Assets → base.css
+   (wklej na końcu pliku), albo utwórz Assets/brand.css i dołącz w
+   layout/theme.liquid:  {{ 'brand.css' | asset_url | stylesheet_tag }}
+   ========================================================================== */
+
+/* Cyfry w cenach nie „skaczą" przy zmianie (tabular figures) */
+.price,
+.price__container,
+.price-item,
+.cart-item__price-wrapper,
+.totals__total-value,
+.cart__footer .totals * {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+/* Delikatna, „galeryjna" oprawa miniatur plakatów — miękki, przytonowany cień */
+.card--standard .card__inner,
+.card--card .card__inner,
+.product__media-item .media img {
+  box-shadow: 0 16px 40px -20px rgba(26, 25, 23, .32);
+}
+
+/* Ziarno papieru — cienka faktura na całej stronie (editorial luxury) */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  opacity: .03;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Nagłówki trochę ciaśniej — bliżej charakteru sklepu demo */
+h1, h2, .h1, .h2, .title--primary {
+  letter-spacing: -.03em;
+}
