@@ -41,12 +41,9 @@ const esc = (v) => {
 const row = (obj) => COLUMNS.map((c) => esc(obj[c] ?? "")).join(",");
 
 function bodyHtml(p) {
-  const sizes = SIZES.map((s) => `<li>${s.label} — ${s.dim}</li>`).join("");
-  return [
-    `<p>${p.description}</p>`,
-    `<p><strong>Druk:</strong> błyszczący papier 200 g/m². Pakowane w sztywną tubę.</p>`,
-    `<p><strong>Dostępne rozmiary:</strong></p><ul>${sizes}</ul>`,
-  ].join("");
+  // Sam opis marketingowy. Papier i rozmiary są na karcie produktu (akordeony),
+  // więc nie dublujemy ich w opisie.
+  return `<p>${p.description}</p>`;
 }
 const seoDesc = (p) => p.description.replace(/\s+/g, " ").slice(0, 155);
 

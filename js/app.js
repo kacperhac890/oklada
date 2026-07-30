@@ -89,6 +89,20 @@ const Router = (() => {
   /* ---- Katalog z Shopify (headless) --------------------------------------- */
   // Mapuje surowe produkty ze Storefront API na format sklepu. Interfejs się nie
   // zmienia — te same pola (id, category, image, prices{A4,A3,B2}, ...).
+  // Czyści opis: usuwa automatyczny boilerplate z importu CSV („Druk: … / Dostępne
+  // rozmiary: …”). Nie rusza normalnych opisów wpisywanych ręcznie w Shopify.
+  function cleanDescription(desc) {
+    if (!desc) return "";
+    let d = String(desc);
+    let cut = -1;
+    [/Druk:\s*błyszcz/i, /Dostępne rozmiary:/i].forEach((re) => {
+      const m = d.search(re);
+      if (m > 0 && (cut === -1 || m < cut)) cut = m;
+    });
+    if (cut > 0) d = d.slice(0, cut);
+    return d.trim();
+  }
+
   function mapShopifyProducts(nodes) {
     const cats = Store.getCategories();
     const byName = {};
@@ -114,7 +128,7 @@ const Router = (() => {
         tags: n.tags || [],
         image: (n.featuredImage && n.featuredImage.url) || `assets/posters/${n.handle}.jpg`,
         featured,
-        description: n.description || "",
+        description: cleanDescription(n.description),
         prices,
       };
     }).filter((p) => Object.keys(p.prices).length); // pomiń produkty bez wariantów cen
