@@ -64,6 +64,24 @@ const ShopifyClient = (() => {
     return v.id;
   }
 
+  // Pobiera wszystkie produkty ze Storefront API (surowe węzły). Mapowanie na
+  // format sklepu robi app.js (potrzebuje listy kategorii). Zwraca [] przy błędzie.
+  async function fetchProducts() {
+    const q = `query {
+      products(first: 100) {
+        nodes {
+          handle title description productType tags
+          featuredImage { url altText }
+          variants(first: 12) {
+            nodes { id availableForSale price { amount } selectedOptions { name value } }
+          }
+        }
+      }
+    }`;
+    const data = await gql(q, {});
+    return (data.products && data.products.nodes) || [];
+  }
+
   // lines: [{ handle, size, qty }]  →  zwraca URL kasy Shopify
   async function createCheckout(lines) {
     const cartLines = [];
@@ -80,5 +98,5 @@ const ShopifyClient = (() => {
     return r.cart.checkoutUrl;
   }
 
-  return { CONFIG, enabled, productionUI, getVariantId, createCheckout };
+  return { CONFIG, enabled, productionUI, getVariantId, createCheckout, fetchProducts };
 })();

@@ -71,6 +71,25 @@ Gotowe — sprzedaż idzie przez Shopify, a klient widzi Twój front.
 
 ---
 
+## Dodawanie i edycja produktów (jedno miejsce: Shopify)
+
+Strona **pobiera produkty automatycznie ze Shopify** (Storefront API) przy każdym wejściu/odświeżeniu.
+Nie ruszasz kodu — wszystko robisz w panelu Shopify:
+
+**Shopify → Produkty → Dodaj produkt:**
+- **Tytuł** i **opis**.
+- **Zdjęcie** (to ono pokaże się na stronie — wgraj plakat w pełnej rozdzielczości).
+- **Warianty → opcja „Rozmiar"** z wartościami **A4, A3, B2** i ceną dla każdego. (To ważne — po tych
+  nazwach strona buduje selektor rozmiaru i podłącza kasę. Zawsze dodaj wszystkie trzy.)
+- **Typ produktu** albo **tag** = nazwa kategorii: `Motoryzacja`, `Typografia`, `Ilustracja` lub `Abstrakcja`
+  (po tym trafia do właściwej sekcji na stronie).
+- (Opcjonalnie) tag **`wyróżniony`** → pokaże się w „Bestsellery" na stronie głównej.
+
+Zapisz → odśwież stronę → plakat jest, z działającą kasą. Żadnych commitów.
+
+> Zmiana ceny, opisu, zdjęcia albo usunięcie produktu w Shopify od razu widać na stronie po odświeżeniu.
+> Lokalny `js/data.js` służy już tylko jako awaryjny katalog, gdyby Shopify nie odpowiedziało.
+
 ## Co jest gdzie (headless)
 
 | Element | Gdzie |

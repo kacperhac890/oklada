@@ -23,7 +23,8 @@ const Pages = (() => {
   function home() {
     const products = Store.getProducts();
     const cats = Store.getCategories();
-    const featured = products.filter((p) => p.featured).slice(0, 8);
+    const flagged = products.filter((p) => p.featured);
+    const featured = (flagged.length ? flagged : products).slice(0, 8);
     const catImg = (slug) => (products.find((p) => p.category === slug) || {}).image || "";
 
     const html = `

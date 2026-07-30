@@ -86,12 +86,68 @@ const Router = (() => {
 
   function reload() { render(); }
 
-  function start() {
+  /* ---- Katalog z Shopify (headless) --------------------------------------- */
+  // Mapuje surowe produkty ze Storefront API na format sklepu. Interfejs się nie
+  // zmienia — te same pola (id, category, image, prices{A4,A3,B2}, ...).
+  function mapShopifyProducts(nodes) {
+    const cats = Store.getCategories();
+    const byName = {};
+    cats.forEach((c) => { byName[c.name.trim().toLowerCase()] = c.slug; });
+    const fallbackCat = cats[0] ? cats[0].slug : "inne";
+
+    return nodes.map((n) => {
+      const prices = {};
+      (n.variants && n.variants.nodes ? n.variants.nodes : []).forEach((v) => {
+        const opt = (v.selectedOptions || []).find((o) => /rozmiar|size/i.test(o.name)) || (v.selectedOptions || [])[0];
+        if (opt && opt.value) prices[opt.value] = Math.round(parseFloat((v.price && v.price.amount) || "0"));
+      });
+      let category = byName[(n.productType || "").trim().toLowerCase()];
+      if (!category) {
+        for (const t of (n.tags || [])) { const s = byName[t.trim().toLowerCase()]; if (s) { category = s; break; } }
+      }
+      if (!category) category = fallbackCat;
+      const featured = (n.tags || []).some((t) => /wyróżnion|wyroznion|bestseller|featured|polecan/i.test(t));
+      return {
+        id: n.handle,
+        title: n.title,
+        category,
+        tags: n.tags || [],
+        image: (n.featuredImage && n.featuredImage.url) || `assets/posters/${n.handle}.jpg`,
+        featured,
+        description: n.description || "",
+        prices,
+      };
+    }).filter((p) => Object.keys(p.prices).length); // pomiń produkty bez wariantów cen
+  }
+
+  async function loadShopifyCatalog() {
+    if (!(typeof ShopifyClient !== "undefined" && ShopifyClient.enabled())) return;
+    try {
+      const nodes = await Promise.race([
+        ShopifyClient.fetchProducts(),
+        new Promise((_, rej) => setTimeout(() => rej(new Error("timeout")), 8000)),
+      ]);
+      const mapped = mapShopifyProducts(nodes);
+      if (mapped.length) Store.setCatalog(mapped);
+    } catch (e) {
+      console.warn("Shopify: nie udało się pobrać produktów — używam lokalnego katalogu.", e);
+    }
+  }
+
+  function showLoading() {
+    app().innerHTML = `<section class="section wrap" style="min-height:60vh;display:grid;place-content:center;text-align:center"><div class="spinner" style="margin:0 auto"></div></section>`;
+  }
+
+  async function start() {
     Store.seedIfNeeded();
     UI.renderNav();
     UI.renderFooter();
     UI.renderCartShell();
     window.addEventListener("hashchange", render);
+    if (typeof ShopifyClient !== "undefined" && ShopifyClient.enabled()) {
+      showLoading();
+      await loadShopifyCatalog();
+    }
     render();
   }
 

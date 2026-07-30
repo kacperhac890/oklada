@@ -57,7 +57,14 @@ const Store = (() => {
   }
 
   /* ---- Katalog ------------------------------------------------------------ */
-  const getProducts = () => read(KEYS.products, []);
+  // Katalog „na żywo" z Shopify (headless). Gdy ustawiony — ma pierwszeństwo
+  // przed lokalnym seedem. Reszta aplikacji nie musi wiedzieć, skąd pochodzi.
+  let liveProducts = null;
+  function setCatalog(products) {
+    liveProducts = Array.isArray(products) && products.length ? products : null;
+    emit("catalog");
+  }
+  const getProducts = () => liveProducts || read(KEYS.products, []);
   const getProduct = (id) => getProducts().find((p) => p.id === id) || null;
   const getCategories = () => read(KEYS.categories, []);
   const getCategory = (slug) => getCategories().find((c) => c.slug === slug) || null;
@@ -195,7 +202,7 @@ const Store = (() => {
   return {
     SIZES, KEYS,
     seedIfNeeded, resetCatalog, slugify,
-    getProducts, getProduct, getCategories, getCategory, upsertProduct, deleteProduct,
+    getProducts, getProduct, setCatalog, getCategories, getCategory, upsertProduct, deleteProduct,
     getCart, cartCount, cartLines, cartSubtotal, addToCart, setQty, removeFromCart, clearCart,
     getOrders, createOrder, updateOrderStatus, ORDER_STATUSES,
     getMessages, addMessage, markMessagesRead, replyToMessage,
