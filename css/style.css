@@ -692,10 +692,32 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height
   .values { grid-template-columns: 1fr; }
   .stat-row { grid-template-columns: 1fr 1fr; gap: 16px; }
   .price-grid { grid-template-columns: 1fr; }
-  .hero__meta { gap: 22px; }
+  .hero__meta { gap: 20px; }
   .section__head { flex-direction: column; align-items: flex-start; }
   .footer__grid { grid-template-columns: 1fr; }
-  .card__quick { opacity: 1; transform: none; } /* dotyk: pokaż od razu */
+
+  /* Pasek CTA na stronie głównej: jedna kolumna zamiast ściśniętych dwóch */
+  .cta-band { grid-template-columns: 1fr !important; gap: 22px !important; padding: clamp(28px, 7vw, 40px) !important; }
+
+  /* Karty produktów: czyściej na telefonie — bez nakładki, tytuł nad ceną */
+  .card__quick { display: none; }
+  .card__body { flex-direction: column; align-items: flex-start; gap: 3px; padding-top: 12px; }
+  .card__title { font-size: 1rem; line-height: 1.25; }
+  .card__price { font-size: .86rem; }
+
+  /* Nawigacja: mniej ikon (szukanie jest w menu i na stronie Sklep) */
+  .nav__search { display: none; }
+  .nav__actions { gap: 2px; }
+}
+
+/* Bardzo małe telefony (≤400 px) — ciaśniejsze marginesy i skala */
+@media (max-width: 400px) {
+  :root { --gutter: 16px; }
+  .grid, .grid--3 { gap: 12px; }
+  .hero__title { font-size: 2.15rem; }
+  .hero__meta b { font-size: 1.4rem; }
+  .section__title { font-size: 1.7rem; }
+  .cat-card__name { font-size: 1.02rem; }
 }
 
 /* ---- Reduced motion ----------------------------------------------------- */

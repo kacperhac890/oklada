@@ -120,7 +120,7 @@ const UI = (() => {
           <div class="nav__spacer"></div>
           <div class="nav__actions">
             <button class="icon-btn" id="themeToggle" aria-label="Przełącz motyw">${icons.moon({ s: 19 })}</button>
-            <a href="#/sklep" class="icon-btn" aria-label="Szukaj">${icons.search({ s: 19 })}</a>
+            <a href="#/sklep" class="icon-btn nav__search" aria-label="Szukaj">${icons.search({ s: 19 })}</a>
             <button class="icon-btn cart-btn" id="cartToggle" aria-label="Koszyk">
               ${icons.bag({ s: 20 })}
               <span class="cart-badge" id="cartBadge">0</span>
